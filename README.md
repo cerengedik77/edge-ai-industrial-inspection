@@ -4,15 +4,11 @@ Fine-tuned YOLO11n to detect bottle-cap condition from a public dataset.
 
 Python · YOLO11 · Ultralytics · OpenCV
 
-## Result
+**Precision 82.6% · Recall 82.9% · mAP50 81.6% · 13.8 ms on Tesla T4**
 
-| Metric | Value |
-|---|---|
-| Precision | 82.6% |
-| Recall | 82.9% |
-| mAP50 | 81.6% |
-| Inference | 13.8 ms on Tesla T4 |
-| Model | YOLO11n, 5.2 MB |
+<img src="results/predictions/104_jpg.rf.7e2601bec1f456567de13bbfd1c1b505.jpg" width="240">
+<img src="results/predictions/107_jpg.rf.ce2c6f0af1626e183e9c3b6e39abf13f.jpg" width="240">
+<img src="results/predictions/113_jpg.rf.ebb47483cdb619c748309dd9e11490e6.jpg" width="240">
 
 ## Pipeline
 
@@ -27,4 +23,6 @@ The images were not collected by me.
 ## Training
 
 40 epochs, image size 640, batch 16, pretrained YOLO11n, Tesla T4.
-Weights: models/bottle-cap-yolo11n.pt
+
+![training curves](results/results.png)
+![confusion matrix](results/confusion_matrix.png)
